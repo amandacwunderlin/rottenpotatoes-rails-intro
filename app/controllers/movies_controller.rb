@@ -15,9 +15,6 @@ class MoviesController < ApplicationController
     @hilite = params[:sort_by] || 'none'
     @all_ratings = Movie.all_ratings
     
-    if params[:ratings].keys.length > 0
-      @movies = @movies.where(rating: params[:ratings].keys)
-    end
   end
 
   def new
